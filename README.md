@@ -131,49 +131,41 @@ templates of various config file can be found under <config/parameters/tests/>
 - Use symbolic math like sympy or other frameworks using equation graphs, for  
   sped up computation. This feature seemed very inspiring, but we realized that a lot of model freedom would have to be sacrificed to obtain not too impressive speedups.
 
-## Installation  
-
-```bash
-pip install ibes
-```
-
-for installing a development version and actively and iteratively update and
-develop it it is recommended to download from source and install as editable
-
-```bash
-git clone git@github.com:flo-schu/ibes.git
-cd ibes
-pip install --editable .[dev]
-```
-### unit tests
-
-it is recommended to run tests and see if everything works as expected in your
-shell type `pytest` see <https://docs.pytest.org/en/7.1.x/> for more info
 
 ### General Notes
 
 - Order of columns in events table determines execution order.
 - Input of an event file always overrides the `time` configuration in `simulation` in the config.json file
 
-### development set up
 
-vscode as a texteditor is recommended but not necessary scripts can be run from the commandline, line-by-line or in a debugging environment
+## Installation  
 
-clone repository
 ```bash
-git clone git@github.com:flo-schu/ibes.git
+pip install ibes
 ```
 
-create conda environment
+### Development 
+
+
+VScode as a texteditor is recommended but not necessary scripts can be run from the commandline, line-by-line or in a debugging environment
+
+Create conda environment
 ```bash
 conda create -n ibes
 conda activate ibes
 conda install python=3.11
 ```
 
-change into repository `cd ibes` and install
+For installing a development version and actively and iteratively update and develop it it is recommended to download from source and install as editable
+Clone respository, change into directory and install.
 ```bash
-pip install .[dev]
+git clone git@github.com:flo-schu/ibes.git
+cd ibes
+pip install --editable .[dev]
 ```
 
-to test if everything works as expected run the command `pytest`
+It is recommended to run tests and see if everything works as expected in your
+shell type `pytest` see <https://docs.pytest.org/en/7.1.x/> for more info
+```bash
+pytest
+```
