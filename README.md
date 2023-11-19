@@ -157,11 +157,23 @@ shell type `pytest` see <https://docs.pytest.org/en/7.1.x/> for more info
 
 ### development set up
 
-- vscode as a texteditor is recommended but not necessary scripts can be run from the commandline, line-by-line or in a debugging environment
-- fork <https://github.com/flo-schu/ibes>
-- git clone git@github.com:flo-schu/ibes.git
-- `conda create -n ibes`
-- `conda activate ibes`
-- `conda install python=3.11`
-- to test if everything works as expected run tests 
-  `pytest`
+vscode as a texteditor is recommended but not necessary scripts can be run from the commandline, line-by-line or in a debugging environment
+
+clone repository
+```bash
+git clone git@github.com:flo-schu/ibes.git
+```
+
+create conda environment
+```bash
+conda create -n ibes
+conda activate ibes
+conda install python=3.11
+```
+
+change into repository `cd ibes` and install
+```bash
+pip install .[dev]
+```
+
+to test if everything works as expected run the command `pytest`
